@@ -1,0 +1,474 @@
+/*********************** VARIABLES ********************/
+:root {
+    --primaryColor: #214F9e;
+    --secondryColor: #00D8D3;
+    --largeWeight: 700;
+    --color-background: #f6f6f9;
+    --color-info-light: #dce1eb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*********************** HEADER ********************/
+.header {
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    position: fixed; /* Keep the header fixed at the top */
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo a .back {
+    position: absolute; /* Position the back button absolutely */
+    left: 0; /* Align to the left edge of the parent (.header) */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    bottom: 0.1rem;
+    top:0;
+    
+}
+.back p {
+    font-size: 1.1rem;
+    color: #214f9e;
+}
+
+
+.back img {
+    height: 2rem;
+    width: 2rem;
+    
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 5rem;
+    padding-left: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    width: 100%;
+    gap: 8px;
+    position: relative;
+}
+span {
+    color: red;
+}
+
+.logo #word1,
+.logo #word2 {
+    font-size: 1.25em;
+    margin: 0; /* Remove default margin */
+}
+
+#word1 {
+    font-weight: var(--largeWeight);
+}
+
+#word2 {
+    font-weight: var(--largeWeight);
+    color: var(--secondryColor);
+}
+
+
+.logo a {
+    cursor: pointer;
+}
+
+form {
+    background-color: var(--color-background);
+    width: 52rem;
+    border: solid rgba(128, 128, 128, 0.297) 1.5px;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.right-section {
+    height: 10rem;
+    position: absolute;
+    right: 0;
+    width: 25rem;
+    min-height: 100vh;
+    background: var(--color-background);
+}
+
+aside {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    position: fixed;
+    width: 25rem; /* Adjust width as needed */
+    height:100vh; /* Set height to 100% of the viewport height */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    background: var(--color-background); /* Your background color */
+    z-index: 2; /* Ensure it stays above other content */
+}
+
+.all2{
+    position: relative;
+    bottom: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+#PharmacyName,
+#PharmacistName,
+#PharmacistLastName {
+    width: 13.9rem;
+    padding: 0.8rem;
+}
+
+.pharm {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+
+
+.first,
+.second,
+.third {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.8rem;
+}
+
+input {
+    border: solid rgba(128, 128, 128, 0.297) 1.5px;
+}
+
+.phone {
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+
+#phone {
+    padding: 0.8rem;
+    width: 48.3rem;
+}
+
+.adress {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#adress {
+    padding: 0.8rem;
+    width: 48.3rem;
+}
+
+.pharm2 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 1rem;
+    gap: 1rem; /* Add space between the two fields */
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.PostalCode,
+.city {
+    flex: 1; /* Make both fields take equal space */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.PostalCode input,
+.city input {
+    padding: 0.8rem;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+#city{
+padding-left:14rem;
+}
+
+
+
+
+.btns {
+    padding: 3rem 0 3rem 1.3rem;
+    width: 100%;
+    display: flex;
+    gap: 0.8rem; /* Consistent gap between buttons */
+    align-items: center; /* Align buttons vertically */
+}
+
+.saveBtn {
+    background-color: #1CAE72;
+    padding: 1rem; /* Consistent padding */
+    width: 8rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    cursor: pointer;
+}
+.saveBtn:hover{
+    background-color: #08693f;
+}
+
+.saveBtn input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+    cursor: pointer;
+}
+.saveBtn img
+{
+   height: 1.3rem;
+   width: 1.3rem;
+}
+.cancelBtn {
+    background-color: gray;
+    width: 8rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 1.1rem; 
+    cursor: pointer;
+}
+.cancelBtn:hover{
+    background-color: rgba(0, 0, 0, 0.381);
+}
+
+.cancelBtn p {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+input {
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.circle-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color:rgba(74, 72, 72, 0.865);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .number {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  #delivery  
+  {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.838);
+
+  }
+
+  .step1 , .step2{
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    padding-left: 20rem;
+  }
+  #user{
+    color: rgba(0, 0, 0, 0.84);
+    font-weight: 600;
+  }
+  #diss{
+    padding-left: 6rem;
+  }
+
+  #logout{
+    color: red;
+    cursor: pointer;
+  }
+
+  #usernameAcc , #diss , #logout{
+    font-size: 1.1rem;
+  }
+
+  .back p:hover{
+    border-bottom: solid 2px #214f9e;
+  }
+
+
+
+
+
+
+.all 
+{
+   margin: 0 1rem 0 1rem;
+   
+}
+
+
+
+
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 p {
+    font-size: 1.2rem;
+}
+ 
+.all hr {
+  position: relative;
+  bottom: 1.2rem;
+}
+
+
+
+
+
+
+
+.product {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem; /* Image: 10rem, Description: flexible, Price: 5rem */
+    gap: 0.3rem; /* Space between columns */
+    line-height: 1.5rem;
+}
+
+.product img {
+    width: 100%; /* Make image fit its column */
+    height: auto;
+}
+
+.discript {
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.price {
+    width: 100%; /* Ensures it takes full column width */
+    height:100%; /* Just for visibility */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+.price p {
+    margin-left: 1rem;
+}
+
+#designation{
+
+ position: relative;
+ bottom: 0.6rem;
+ font-weight: 600;
+ color: var(--primaryColor);
+}
+#dis{
+    position: relative;
+    bottom: 1rem;
+    font-weight: 600;
+
+}
+#type{
+    position: relative;
+    bottom: 1rem;
+
+}
+#quantity{
+    position: relative;
+    bottom: 1rem;
+}
+#nbr{
+    color: black;
+    font-weight: 600;
+}
+
+.all1{
+}
+
+.totalitem , .deliv , .order{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#ti , #deliv , #order{
+    font-size: 1.1rem;
+}
+
+#price1 , #price2 , #price3{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+
+#order{
+    font-size: 1.3rem;
+}

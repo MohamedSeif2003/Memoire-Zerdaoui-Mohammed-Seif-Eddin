@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="market.css">
+    <title>Market</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html">
+                <div class="logo">
+                    <p id="word1">ALPHA</p>
+                    <p id="word2">PHARM</p>
+                </div>
+            </a>
+            <div class="search">
+                <img src="pics/searchBar.png" alt="Search Icon">
+                <input type="search" class="search-input" placeholder="Search For Products" aria-label="Search for products">
+            </div>
+            <div class="Account">
+                <a href="form.html">
+                    <img src="pics/userAccount.png" alt="Account Icon">
+                    <span>Account</span>
+                </a>
+            </div>
+            <div class="Cart">
+                <a href="#">
+                    <img src="pics/cart.png" alt="Cart Icon">
+                    <span>Cart</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="top-section">
+            <p id="nbrProd">23 Medications</p>
+            <div class="dropdown">
+                <button class="dropbtn" id="dd1" aria-label="Sort by">
+                    <span>Sort</span>
+                    <img src="pics/ddarrow.png" alt="Dropdown Arrow">
+                </button>
+                <div class="dropdown-content" id="sort">
+                    <a href="#" aria-label="Sort by ascending price">Ascending Price</a>
+                    <a href="#" aria-label="Sort by descending price">Descending Price</a>
+                    <a href="#" aria-label="Sort by ascending alphabetical order">Ascending Alphabetical</a>
+                    <a href="#" aria-label="Sort by descending alphabetical order">Descending Alphabetical</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="dd2" aria-label="Filter by form">
+                    <span>Form</span>
+                    <img src="pics/ddarrow.png" alt="Dropdown Arrow">
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" id="tablet" aria-label="Filter by tablet">Tablet</a>
+                    <a href="#" id="capsule" aria-label="Filter by capsule">Capsule</a>
+                    <a href="#" id="sachet" aria-label="Filter by sachet">Sachet</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="cards-container">
+            <!-- Product cards will be dynamically inserted here by market.js -->
+        </div>
+    </div>
+
+    <script src="market.js"></script>
+</body>
+</html>

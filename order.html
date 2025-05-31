@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_circle" />
+    <link rel="stylesheet" href="order.css">
+    <title>Order</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <a href="index.html">
+                <div class="logo">
+                    <p id="word1">ALPHA</p>
+                    <p id="word2">PHARM</p>
+                </div>
+            </a>
+            <div class="search">
+                <img src="pics/searchBar.png" alt="Search Icon">
+                <input type="search" class="search-input" placeholder="Search For Products" aria-label="Search for products">
+            </div>
+            <div class="Account">
+                <a href="form.html">
+                    <img src="pics/userAccount.png" alt="Account Icon">
+                    <span>Account</span>
+                </a>
+            </div>
+            <div class="Cart">
+                <a href="#">
+                    <img src="pics/cart.png" alt="Cart Icon">
+                    <span>Cart</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Left Section (Product Image) -->
+            <div class="left-section">
+                <div class="image">
+                    <div class="Path">
+                        <pre><span id="Hh">Home</span>  /  <span id="Mm">Market</span>  /  <span id="Dd"></span></pre>
+                    </div>
+                    <img src="" alt="Product Image" id="product-image">
+                </div>
+            </div>
+
+            <!-- Right Section (Product Details) -->
+            <div class="right-section">
+                <div class="details">
+                    <!-- Top Section (Product Name) -->
+                    <div class="top">
+                        <p id="designation"></p>
+                    </div>
+                    <hr>
+
+                    <!-- Bottom Section (Product Details) -->
+                    <div class="bottom">
+                        <!-- Type Display -->
+                        <div class="type-container" style="width: 97%; display: flex; justify-content: center; flex-direction: column; margin-bottom: 2rem;">
+                            <div id="type" class="type-display" style="border-radius: .5rem; border: solid 1px; padding: 0.8rem; background-color: white;"></div>
+                        </div>
+
+                        <!-- Quantity and Price -->
+                        <div class="inputs">
+                            <div class="quantity">
+                                <button class="decrease" aria-label="Decrease quantity">-</button>
+                                <input type="number" id="quantity" aria-label="Quantity" value="1" min="1">
+                                <button class="increase" aria-label="Increase quantity">+</button>
+                            </div>
+                            <p id="price" class="price-display"></p>
+                            <button class="OrderBtn" aria-label="Order now" id="dedouna">
+                                <span>Order Now</span>
+                            </button>
+                        </div>
+
+                        <!-- Stock Information -->
+                        <div class="stock">
+                            <p>
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span id="stock-info"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>

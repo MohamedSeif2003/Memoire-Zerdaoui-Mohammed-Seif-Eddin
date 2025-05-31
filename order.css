@@ -1,0 +1,453 @@
+:root{
+    --color-primary : #214F9E;
+    --color-danger : #ff7782;
+    --color-success : #41f1b6 ; 
+    --color-warning : #ffbb55;
+    --color-white: #fff;
+    --color-info-dark:#7d8da1;
+    --color-info-light : #dce1eb;
+    --color-primary-variant : #111e88;
+    --color-dark-variant: #677483 ; 
+    --color-background : #f6f6f9; 
+    --color-light:rgba(132,139,200,0.18);
+
+    --card-border-radius:2rem  ;
+    --border-radius-1 : 0.4rem ;
+    --border-radius-2 : 0.8rem ; 
+    --border-radius-3 : 1.2rem ; 
+
+    --card-padding:1.8rem;
+    --padding-1:1.2rem;
+    --box-shadow : 0 2rem 3rem var(--color-light);
+
+
+}
+
+
+/***********************VARIABLES********************/
+:root{
+    --primaryColor: #214F9E;
+    --secondryColor: #00D8D3;
+    --largeWeight: 700; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    box-sizing:border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+}
+
+/************************* header **********************/
+.header {
+    background-color: white;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+a{
+    color: black;
+}
+
+
+.logo{
+    display: flex;
+    gap: 8px;
+    padding-left: 8.313em;
+    
+}
+.logo #word1 ,#word2 , li { 
+    font-size: 1.25em;
+}
+#word1{
+    font-weight: var(--largeWeight);
+}
+#word2{
+    font-weight: var(--largeWeight );
+    color: var( --secondryColor );
+}
+
+.navbar ul{
+    display: flex;
+    gap: 60px;
+}
+li{
+    list-style: none;
+    white-space: nowrap;
+
+}
+a{
+    text-decoration: none;
+
+}
+
+.navbar ul a li {
+    color:var(--secondryColor);
+    font-weight:550;
+}
+
+
+
+
+.Cart a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    padding-top : 10px;
+    padding-bottom : 10px;
+    padding-right: 4rem;
+    line-height: 1; /* Ensures minimal space between lines */
+}
+
+.Account a  {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    padding-top : 10px;
+    padding-bottom : 10px;
+    line-height: 1; /* Ensures minimal space between lines */
+}
+
+
+
+.Account img  , .Cart img {
+    filter: brightness(0) contrast(1.5);
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.Account p , .Cart p {
+    margin: 0; /* Removes default spacing */
+    padding: 0;
+}
+
+
+
+.search{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding:0.3rem;
+    border-radius: 28px;
+    background: transparent;
+    width: 600px;
+    border: solid 1px;
+    border: 1px solid hsl(0, 0%, 80%); /* Light gray */
+    
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 300px;
+    flex: 1;
+    padding: 0.4rem;
+    
+}
+
+.search img {
+    filter: brightness(0) contrast(1.5);
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.search-input::placeholder , .search-icon{
+    
+    color:rba(0,0,0,0.25);
+}
+
+
+
+
+
+
+
+
+.account-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    color: black; /* Default color */
+    transition: color 0.3s ease;
+  }
+  
+  .account-icon:hover {
+    color: #214F9E; /* Hover color */
+  }
+
+
+
+.search-input::placeholder , .search-icon{
+    
+    color:rba(0,0,0,0.25);
+}
+
+
+
+
+
+.Path{
+ position: relative;
+ bottom: 4.5rem;
+ right: 2.5rem;
+ 
+}
+
+.Path pre {
+    font-weight:100;
+    color: rgba(0, 0, 0, 0.742);
+    font-size: 1rem;
+}
+
+
+
+
+/*********************** MAIN CONTENT ********************/
+.main-content {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.left-section {
+    flex: 1; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top:10rem ;
+
+    
+}
+
+
+.right-section {
+    flex: 1; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure vertical alignment */
+    background-color: #F5F5F5;
+    margin-top: 6rem; /* Adjust as needed */
+    margin-right: 1.5rem; /* Adjust as needed */
+    border-radius: 0.8rem;
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    position: relative;
+    top: 1rem; /* Adjust as needed */
+}
+
+
+
+.right-section .details{
+    
+    width: 93%;
+    
+}
+
+
+
+
+#designation {
+    font-size: 1.5rem;
+    font-weight: var(--largeWeight);
+    color: var(--primaryColor);
+}
+
+#type {
+    padding: .6rem;
+    width: 100%;
+    font-size: 1rem;
+    
+}
+
+#Mm:hover{
+    cursor: pointer;
+}
+
+
+.top{
+    width:100%;
+}
+
+hr{
+    margin-bottom:2rem ;
+}
+
+.bottom{
+    width: 100%;
+}
+.type{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+}
+
+
+.type p {
+    border-radius: .5rem;
+    border: solid 1px ;
+    padding: 0.8rem;
+    background-color: white;
+
+}
+.type select:hover{
+    cursor: pointer;
+}
+.type select option:hover{
+    cursor: pointer;
+}
+label{
+    margin: .5rem;
+
+}
+#oblig{
+    color: red;
+    
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+.inputs .quantity
+{
+     display: flex;
+}
+#quantity  {
+    outline: none;
+}
+
+.decrease {
+    background-color: rgba(128, 128, 128, 0.605);
+    color: white;
+    padding: 1rem;
+    border-radius: .1rem;
+    border: none;
+    position: relative;
+    padding-right: 1.5rem;
+    left: .4rem;
+    
+}
+.increase{
+    background-color:#1CAE72 ;
+    color: white;
+    padding: 1rem;
+    border-radius: .2rem;
+    position: relative;
+    padding-left: 1.5rem;
+    right: .5rem;
+    border: none;
+
+
+    
+    
+}
+
+.quantity input {
+    width: 6rem;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.1rem;
+    border: none;
+}
+
+
+.decrease:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.increase:hover {
+    background-color: #137c4f;
+    cursor: pointer;
+}
+
+
+#price 
+{
+
+    font-size: 1.3rem;
+       
+}
+
+
+.OrderBtn {
+    background-color: #1CAE72;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: white;
+    border: none;
+}
+
+
+
+.OrderBtn span {
+    font-size: 1.2rem;
+    
+}
+
+.OrderBtn:hover{
+    cursor: pointer;
+    background-color: #08693f;
+}
+
+
+
+
+
+
+
+
+.stock {
+    background-color: #ddede6;
+    display: flex; 
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #1CAE72;
+    border-radius: 0.4rem;
+    padding: 1rem; /* Ensure some spacing */
+    min-width: 150px; /* Prevents shrinking too much */
+}
+
+/* Ensuring text inside is well-spaced */
+.stock p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center; /* Aligns text and icon in the same line */
+    gap: 0.5rem; /* Adds spacing between icon and text */
+    margin: 0; /* Removes extra margin */
+}
+
+/* Adjust icon alignment */
+.stock span {
+    display: flex;
+    align-items: center;
+}
+
+#Hh:hover{
+  cursor: pointer;
+}

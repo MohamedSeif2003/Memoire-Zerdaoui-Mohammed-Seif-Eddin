@@ -1,0 +1,659 @@
+:root{
+    --color-primary : #214F9E;
+    --color-danger : #ff7782;
+    --color-success : #41f1b6 ; 
+    --color-warning : #ffbb55;
+    --color-white: #fff;
+    --color-info-dark:#7d8da1;
+    --color-info-light : #dce1eb;
+    --color-primary-variant : #111e88;
+    --color-dark-variant: #677483 ; 
+    --color-background : #f6f6f9; 
+    --color-light:rgba(132,139,200,0.18);
+
+    --card-border-radius:2rem  ;
+    --border-radius-1 : 0.4rem ;
+    --border-radius-2 : 0.8rem ; 
+    --border-radius-3 : 1.2rem ; 
+
+    --card-padding:1.8rem;
+    --padding-1:1.2rem;
+    --box-shadow : 0 2rem 3rem var(--color-light);
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline:0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select:none;
+    overflow-x: hidden;
+}
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+
+
+
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+.primary{
+    color: var(--color-primary);
+
+}
+
+.danger{
+    color: #00D8D3;
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto ;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem ;
+}
+
+
+aside{
+    height: 100vh;
+    width: 17%;
+}
+
+main{
+    margin-top:1.4rem;
+    width: 83%;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.8rem;
+
+}
+
+aside .close {
+    display: none; 
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+     
+}
+
+aside h3{
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+   
+}
+
+
+aside .sidebar a span {
+       font-size: 1.6rem;
+       transition: all 300ms ease;
+}
+
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background: var(--color-info-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+
+ 
+aside .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height:100% ;
+    background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary); 
+    margin-left: calc(1rem - 3px);
+
+}
+
+
+aside .sidebar a:hover  {
+    color: var(--color-primary);
+    
+
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+
+ 
+
+.Profilee 
+{
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 4rem;
+    top: 1rem;
+    
+}
+
+.profile-photo{
+    width: 3rem;
+    height: 3rem ;
+    border-radius: 50%;
+
+} 
+
+
+.profilee .info {
+    display: block;
+}
+
+
+/*************MAIN******************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .insights{
+    display:grid;
+    grid-template-columns: repeat(2  , 1fr);
+    gap: 1.6rem;
+}
+
+main .insights > div {
+    background:var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .recent-users{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+main .recent-users h2{
+    margin-bottom: 0.8rem;
+}
+main .recent-users table{
+    background: var(--color-white);
+    width:68rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    border-spacing: 10px;
+    margin-right: 2rem;
+}
+main .recent-users table:hover{
+    box-shadow:none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light) ;
+    color: var(--color-dark-variant);
+    font-size: 1rem;
+}
+
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-users a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+thead tr th  {
+text-wrap: nowrap;
+font-size: 1rem;
+}
+
+tbody tr td  {
+ text-wrap: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+    height: 3rem;
+    width: auto;
+    margin-right: 1rem;
+}
+
+#imagPreview{
+    height: 4rem;
+}
+
+/*******Right Section*********/
+
+
+
+
+
+
+ 
+
+.info p , .info b , .info small {
+    font-size: 1.1rem;
+}
+
+
+
+
+#menu-btn{
+   display: none;
+}
+
+
+ .btn.accept {
+    color: green;
+    padding-bottom: 0.5rem;
+}
+.btn.reject{
+    color: red;
+    padding-top: 0.5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+  .container{
+    width: 90%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  aside .logo h2{
+    display: none;
+  }
+
+  aside .sidebar h3{
+    display: none;
+  }
+
+  aside .sidebar a {
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .recent-users{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem; 
+  }
+
+ 
+
+  
+}
+
+
+
+
+@media screen and (max-width:768px) {
+     
+    .container{
+        width: 100%;
+        grid-template-columns:1fr ;
+    }
+
+    aside{
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        animation: showMenu 400ms ease forwards;
+        display: none;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+        
+    }
+        
+    
+        
+    
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2 {
+        display: inline;
+        margin-left: 2rem;
+
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child
+    {
+        position: absolute;
+        bottom: 5rem;
+    }
+    aside .close {
+        display:inline-block;
+        cursor : pointer;
+
+    }
+
+    #menu-btn{
+        display: block;
+     }
+
+    main {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    main .recent-users{
+        position: relative;
+        margin: 3rem 0 0 0 ;
+        width: 100%;
+
+
+    }
+
+    main  .recent-users table{
+        width: 100%;
+        margin: 0;
+       
+    }
+
+    
+
+}
+
+
+
+
+
+
+ /* General Styles */
+
+
+ .container {
+    display: flex;
+    min-height: 100vh;
+}
+
+label , span {
+    font-size: 1.2rem;
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-content header h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.main-content header .btn.back {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.main-content header .btn.back:hover {
+    opacity: 0.9;
+}
+
+/* Pharmacist Details Section */
+.pharmacist-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pharmacist-details .detail-item {
+    margin-bottom: 15px;
+}
+
+.pharmacist-details .detail-item label {
+    font-weight: bold;
+    color: #2c3e50;
+    display: inline-block;
+    width: 150px;
+}
+
+.pharmacist-details .detail-item span {
+    color: #333;
+}
+
+/* Profile Section */
+.Profile {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Profile .info {
+    text-align: right;
+}
+
+.Profile .info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.Profile .info small {
+    color: #777;
+}
+
+.Profile .profile-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

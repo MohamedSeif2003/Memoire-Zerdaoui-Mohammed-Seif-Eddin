@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>AlphaPharm</title>
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-box login">
+            <form action="login.php" method="POST">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                
+                <button type="submit" class="btn" id="bbttnn">Login</button>
+
+            </form>
+        </div>
+
+ 
+        
+        
+        <div class="form-box register">
+
+
+            <form action="register_pharmacist.php" method="POST" enctype="multipart/form-data">
+
+                <h1>Registration</h1>
+
+                <div class="input-box">
+                    <input type="text" name="username" placeholder=" Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                
+                <div class="input-box" id="certi">
+                    <input id="lisc" type="text" name="license_number" placeholder="Licence Number" required>
+                    <i class='bx bxs-file'></i>
+                
+                    <input type="file" id="uploadBtn" name="license_certificate" required>
+                    <label for="uploadBtn">Upload File</label>
+                </div>
+
+               
+    
+
+                <button type="submit" class="btn">Register</button>
+
+                
+                    
+
+            </form>
+
+
+        </div>
+
+
+
+
+
+
+        
+        <div class="toggle-box">
+
+
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome Back!</h1>
+                
+                
+                <button class="btn register-btn">Register</button>
+            </div>
+
+
+
+            <div class="toggle-panel toggle-right">
+                <h1>Hi Doctor!</h1>
+                <h1 id="alpha" >Welcome to AlphaPharm</h1>
+               
+                <button class="btn login-btn">Login</button>
+            </div>
+
+
+        </div>
+    
+    </div>
+
+
+
+    
+    <script src="form.js"></script>
+</body>
+</html>
