@@ -1,41 +1,35 @@
 <?php
-// Database connection
 $host = 'localhost';
 $dbname = 'alphapharm';
 $username = 'root';
 $password = '';
 
-// Create a new MySQLi connection
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die(json_encode(["success" => false, "message" => "Connection failed: " . $conn->connect_error]));
 }
 
-// Set the response header to JSON
+
 header('Content-Type: application/json');
 
-// Function to generate product_id in the format prod123
+
 function generateProductId($conn) {
-    $prefix = "prod"; // Prefix for the ID
-    $sql = "SELECT COUNT(*) as count FROM products"; // Count existing products
+    $prefix = "prod";
+    $sql = "SELECT COUNT(*) as count FROM products";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    $count = $row['count'] + 1; // Increment count for the new product
-    return $prefix . str_pad($count, 3, '0', STR_PAD_LEFT); // Format: prod + count (e.g., prod123)
+    $count = $row['count'] + 1; 
+    return $prefix . str_pad($count, 3, '0', STR_PAD_LEFT); 
 }
 
-// Handle GET requests
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    // Check if the action is to delete a product
     if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['product_id'])) {
-        $product_id = $conn->real_escape_string($_GET['product_id']); // Get the product_id to delete
+        $product_id = $conn->real_escape_string($_GET['product_id']); 
 
-        // Prepare and execute the delete query
         $query = "DELETE FROM products WHERE product_id = '$product_id'";
         if ($conn->query($query)) {
-            // Fetch the updated list of products after deletion
             $query = "SELECT product_id, desig, stock, sell, buy, exp, types, imag FROM products";
             $result = $conn->query($query);
 
@@ -54,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     ];
                 }
 
-                // Return success response with updated products
                 echo json_encode(["success" => true, "message" => "Product deleted successfully.", "products" => $products]);
             } else {
                 echo json_encode(["success" => false, "message" => "Failed to fetch updated products: " . $conn->error]);
@@ -65,11 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         exit;
     }
 
-    // Check if the action is to fetch a single product
     if (isset($_GET['action']) && $_GET['action'] === 'get_product' && isset($_GET['product_id'])) {
         $product_id = $conn->real_escape_string($_GET['product_id']);
 
-        // Fetch product details from the database
         $query = "SELECT product_id, desig, stock, sell, buy, exp, types, imag FROM products WHERE product_id = '$product_id'";
         $result = $conn->query($query);
 
@@ -82,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         exit;
     }
 
-    // Fetch all products from the database
     $query = "SELECT product_id, desig, stock, sell, buy, exp, types, imag FROM products";
 
     // Check if sorting is requested
