@@ -1,16 +1,14 @@
-/// Get the username from the URL query parameter and update the <b> tag
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username');
 console.log("Username from URL:", username);
 
 if (username) {
-    const adminUsernameElement = document.querySelector('.info b'); // Select the <b> tag inside the .info div
+    const adminUsernameElement = document.querySelector('.info b');
     if (adminUsernameElement) {
         adminUsernameElement.textContent = username; // Update the <b> tag with the username
     }
 }
 
-/// Declaration
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
@@ -37,9 +35,8 @@ const buyEd = document.getElementById('buyEd');
 const expEd = document.getElementById('expEd');
 const typeEd = document.getElementById('typeEd');
 
-let dataArray = []; // Array to store product data
-let currentEditId = null; // Variable to store the product_id of the product being edited
-
+let dataArray = []; 
+let currentEditId = null;
 menuBtn.addEventListener('click', function () {
     sideMenu.style.display = 'block';
 });
@@ -131,7 +128,7 @@ fetch('admin.php')
     })
     .catch(error => console.error('Error:', error));
 
-/// Clear Inputs
+
 function clearInputs() {
     imag.value = '';
     imag.dataset.image = '';
@@ -143,7 +140,7 @@ function clearInputs() {
     types.value = '';
 }
 
-/// Delete Product
+
 function deleteProduct(product_id) {
     if (confirm('Are you sure you want to delete this product?')) {
         fetch(`admin.php?action=delete&product_id=${product_id}`, {
@@ -163,7 +160,7 @@ function deleteProduct(product_id) {
     }
 }
 
-/// Edit Product
+
 function editProduct(product_id) {
     const product = dataArray.find(product => product.product_id === product_id); 
     if (!product) {
@@ -171,7 +168,7 @@ function editProduct(product_id) {
         return;
     }
 
-    // Populate the edit modal with product data
+    
     desigEd.value = product.desig;
     stockEd.value = product.stock;
     sellEd.value = product.sell;
@@ -180,11 +177,11 @@ function editProduct(product_id) {
     typeEd.value = product.types;
 
     const imagPreview = document.getElementById('imagPreview');
-    imagPreview.src = product.imag; // Display the product image
+    imagPreview.src = product.imag; 
 
-    currentEditId = product_id; // Store the product_id of the product being edited
+    currentEditId = product_id; 
 
-    moodalOverlay.style.display = 'flex'; // Show the edit modal
+    moodalOverlay.style.display = 'flex'; 
 }
 
 saveEditProduct.onclick = function () {
@@ -194,7 +191,7 @@ saveEditProduct.onclick = function () {
     }
 
     const formData = new FormData();
-    formData.append('product_id', currentEditId); // Add the product_id to the form data
+    formData.append('product_id', currentEditId); 
     formData.append('desig', desigEd.value);
     formData.append('stock', stockEd.value);
     formData.append('sell', sellEd.value);
@@ -203,7 +200,7 @@ saveEditProduct.onclick = function () {
     formData.append('types', typeEd.value);
 
     if (imagEd.files[0]) {
-        formData.append('imag', imagEd.files[0]); // Add the new image file if provided
+        formData.append('imag', imagEd.files[0]); 
     }
 
     // Send the updated data to the server
@@ -215,9 +212,9 @@ saveEditProduct.onclick = function () {
     .then(data => {
         if (data.success) {
             alert('Product updated successfully!');
-            dataArray = data.products; // Update the data array with the new product list
-            showData(data.products); // Refresh the table with the updated data
-            moodalOverlay.style.display = 'none'; // Hide the edit modal
+            dataArray = data.products; 
+            showData(data.products); 
+            moodalOverlay.style.display = 'none'; 
         } else {
             alert('Failed to update product: ' + data.message);
         }
@@ -225,7 +222,7 @@ saveEditProduct.onclick = function () {
     .catch(error => console.error('Error:', error));
 };
 
-/// Close Edit Modal
+
 closeMoodal.onclick = function () {
     moodalOverlay.style.display = 'none';
 };
